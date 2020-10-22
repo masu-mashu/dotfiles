@@ -108,16 +108,9 @@ setopt extended_history
 setopt hist_ignore_space
 setopt hist_no_store
 setopt hist_verify
-bindkey '^P' history-beginning-search-backward
-bindkey '^N' history-beginning-search-forward
-bindkey '^r' history-incremental-pattern-search-backward
-bindkey '^s' history-incremental-pattern-search-forward
 
-autoload -Uz history-search-end
-zle -N history-beginning-search-backward-end history-search-end
-zle -N history-beginning-search-forward-end history-search-end
-bindkey "^p" history-beginning-search-backward-end
-bindkey "^b" history-beginning-search-forward-end
+bindkey '^L' history-beginning-search-backward
+bindkey '^O' history-beginning-search-forward
 
 # Alias
 # cp,mv,rmなどは確認オプションをつける
